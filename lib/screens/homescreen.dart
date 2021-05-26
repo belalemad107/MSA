@@ -283,9 +283,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       }
                       int c;
                       if (gap_controller.text.isEmpty) {
-                        c = -2;
-                      } else {
-                        c = int.parse(gap_controller.text);
+                        c = 6;
+                      }
+                      else if(int.parse(gap_controller.text)> 0){
+                        b = a + 1;
+                      }
+                      else {
+                        c = int.parse(gap_controller.text) + (a - int.parse(gap_controller.text)) + 1;
                       }
                       _formkey.currentState.save();
                       List<dynamic> result = new List();
